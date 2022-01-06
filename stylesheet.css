@@ -90,18 +90,18 @@ award {
 }
 
 strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'Arial', Verdana, Helvetica, sans-serif;
   font-size: 14px;
 }
 
 heading {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'Arial', Verdana, Helvetica, sans-serif;
   font-size: 23px;
   font-weight: 700;
 }
 
 subheading {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'Arial', Verdana, Helvetica, sans-serif;
   font-size: 19px;
   font-weight: 700;
 }
@@ -122,7 +122,7 @@ projecttitle {
 }
 
 name {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'Arial', Verdana, Helvetica, sans-serif;
   font-size: 32px;
 }
 
