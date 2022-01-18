@@ -238,31 +238,17 @@
             <!------------------------------------------------------------------------------->
             <!------------------------------------------------------------------------------->
             <!------------------------------------------------------------------------------->
-            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                 <tbody>
                 <tr>
                     <td style="padding:10px;width:100%;vertical-align:middle">
-                        <heading>娱乐工作</heading>
-
-<!--                         <p>
-                            空闲时我经常独立探索以下领域的技术：<br>
-                        </p>
-                        <p>
-                            - 计算机图形学: 主要研究Geometric modeling、Real-time rendering等方面的相关技术（使用C++、OpenGL/Directx11、Unity3D等）。<br>
-                            - 深度学习：复现过大量深度学习算法，例如Mask R-CNN、Yolo series、BERT等，但主要侧重于图像领域。(使用Python、Tensorflow等)。<br>
-                        </p>
- -->
-                        <p>
-                            以下筛选了学生时期的几个有趣的工作（Note: 未列入深度学习的项目，因为该类工作较为分散且工程量较小）。
-                        </p>
+                        <heading>Personal Projects</heading>
+                        (娱乐项目)
                     </td>
                 </tr>
                 </tbody>
             </table>
-
-
-
-           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                 <tbody>
                 <!-- project -->
                 <tr>
@@ -274,15 +260,31 @@
                         <br>
                         <p></p>
                         <p> This is my implementation of the self-organizing algorithm for 3D tree modeling according to a <i>SIGGRAPH</i> paper <a href="https://dl.acm.org/doi/10.1145/1531326.1531364"
-                               target="_blank">[Palubicki et al.]</a>. People are able to automatically produce different types of trees by adjusting several procedural parameters. I use C++ and OpenGL to write the program.
+                               target="_blank">[Palubicki et al.]</a>. People are able to automatically produce different types of trees by adjusting several procedural parameters.
                                <hr />
-                              <font color="red">  <b> [News]</b> </font> 我的代码被一篇发表在 <font color="red">  <strong> SIGGRAPH Asia</strong> </font>的论文所使用，用于批量合成大量的三维植物模型数据集。 请参见该论文的Acknowledgement(致谢)部分：<br>
+                              <font color="red">  <strong> [News]</strong> </font> My code was also used by a recent paper in <font color="red">  <b><em> SIGGRAPH Asia</em></b></font>. Please see their Acknowledgement section:<br>
 
-                               &nbsp&nbsp&nbsp&nbsp- <i><b>TreePartNet: Neural Decomposition of Point Clouds for 3D Tree Reconstruction.</b></i> <br> 
-                               &nbsp&nbsp&nbsp&nbsp- Liu et al. <i><b>SIGGRAPH Asia 2021</b></i>. <a href="https://vcc.tech/research/2021/TreePartNet">[Project]</a> 
-
+                               - <i><strong>TreePartNet: Neural Decomposition of Point Clouds for 3D Tree Reconstruction.</strong></i> <br> - Liu et al. <i><strong>SIGGRAPH Asia 2021</strong></i>. <a href="https://vcc.tech/research/2021/TreePartNet">[Project]</a> 
                     </td>
                 </tr>
+
+                <!-- project -->
+                <tr>
+                    <td style="padding:20px; width:20%;vertical-align:middle">
+                        <img src='image/project1.png' width="200">
+                    </td>
+                    <td style="padding:20px;width:75%;vertical-align:middle">
+                        <projecttitle>Sketch-based Plant Modeling System. 2016</projecttitle>
+                        <br>
+                        <p></p>
+                        <p> This system is my attempt to reproduce the basic functions of a <i>Eurographics</i> article
+                            <a href="https://www-ui.is.s.u-tokyo.ac.jp/~takeo/papers/okabe-eg2005-tree.pdf"
+                               target="_blank">[Okabe et al.]</a> using OpenGL. It enables the users to create 3D plant
+                            models through sketching several 2D skeletal strokes. </p>
+                            <a href="https://www.bilibili.com/video/BV1cW411c7Dj">[video]</a>
+                    </td>
+                </tr>
+
                 <!-- project -->
                 <tr>
                     <td style="padding:20px; width:20%;vertical-align:middle">
@@ -294,9 +296,28 @@
                         <p></p>
                         <p>I implemented several NPR effects with OpenGL, for example, the pencil drawing and oil painter etc.,
                             with reference to a popular <a href="http://www.realtimerendering.com/">book</a> titled
-                            'real-time rendering'. <a href="https://www.bilibili.com/video/BV1Fb411S76h">[video]</a></p>
+                            'real-time rendering'.</p>
+                             <a href="https://www.bilibili.com/video/BV1Fb411S76h">[video]</a>
                     </td>
                 </tr>
+
+                <!-- project -->
+                <tr>
+                    <td style="padding:20px; width:20%;vertical-align:middle">
+                        <img src='image/minecraft-2.png' width="200">
+                    </td>
+                    <td style="padding:20px;width:75%;vertical-align:middle">
+                        <projecttitle>Simple Minecraft in 2 Days using OpenGL! 2021</projecttitle>
+                        <br>
+                        <p></p>
+                        <!-- <p> Yes...I reproduced the Minecraft again based on my previous program... But this time the rendering effects and efficiency were heavily improved (shadow mapping, 200 FPS, diverse customizable materials, etc.). The caves were generated procedurally by using 3D simplex noise algorithm.</p> -->
+                        <p> I tried to develope a simple but nice
+                            looking Minecraft using OpenGL within only two days. It supports infinite terrain, shadow mappimg, dynamic water as well as diverse customizable materials. The scene can be rendered very efficiently (around 150 FPS). The caves were generated procedurally by using 3D simplex noise algorithm. Moreover, the players can freely
+                            construct their own buildings. </p>
+                            <a href="https://www.bilibili.com/video/BV1zq4y1y7zm/">[video]</a>
+                    </td>
+                </tr>
+
                 <!-- project -->
                 <tr>
                     <td style="padding:20px; width:20%;vertical-align:middle">
@@ -309,27 +330,12 @@
                         <p> I tried to reproduce a journal paper published in <i>the Visual Computer</i> <a
                                 href="https://link.springer.com/article/10.1007/s00371-015-1082-2" target="_blank">[Gai
                             et al.]</a> during my undergraduate time. It translates the input images into the popular
-                            low-polygon fashion style. <a href="https://www.bilibili.com/video/BV1xb411F7Kd">[video]</a>
-                        </p>
+                            low-polygon fashion style.
+                        </p> <a href="https://www.bilibili.com/video/BV1xb411F7Kd">[video]</a>
+                        
                     </td>
                 </tr>
-                <!-- project -->
-                <tr>
-                    <td style="padding:20px; width:20%;vertical-align:middle">
-                        <!-- <img src='image/project1.png' width="200"> -->
-                        <img src='image/proj-sketch.png' width="200">
-                    </td>
-                    <td style="padding:20px;width:75%;vertical-align:middle">
-                        <projecttitle>Sketch-based Plant Modeling System. 2016</projecttitle>
-                        <br>
-                        <p></p>
-                        <p> This system is my attempt to reproduce the basic functions of a <i>Eurographics</i> article
-                            <a href="https://www-ui.is.s.u-tokyo.ac.jp/~takeo/papers/okabe-eg2005-tree.pdf"
-                               target="_blank">[Okabe et al.]</a> using OpenGL. It enables the users to create 3D plant
-                            models through sketching several 2D skeletal strokes. <a
-                                    href="https://www.bilibili.com/video/BV1cW411c7Dj">[video]</a></p>
-                    </td>
-                </tr>
+
                 <!-- project -->
                 <tr>
                     <td style="padding:20px; width:20%;vertical-align:middle">
@@ -344,7 +350,7 @@
                             also deserve our study. This program achieved realtime face detection via cascade AdaBoost
                             in C++ (no use of OpenCV), with reference to <a
                                     href="https://ieeexplore.ieee.org/document/990517?denied=">[Viola et al.]</a>
-                            published in CVPR. <strong>(unfortunately, only my face was not detected
+                            published in CVPR. <strong>(Alright, only my face was not detected
                                 accurately).</strong></p>
                     </td>
                 </tr>
@@ -364,34 +370,20 @@
                             from scratch using PhotoShop Haha.</p>
                     </td>
                 </tr> -->
-                <!-- project -->
-                <tr>
-                    <td style="padding:20px; width:20%;vertical-align:middle">
-                        <img src='image/minecraft-2.png' width="200">
-                    </td>
-                    <td style="padding:20px;width:75%;vertical-align:middle">
-                        <projecttitle>Simple Minecraft in 1 Day using OpenGL! 2018</projecttitle>
-                        <br>
-                        <p></p>
-                        <!-- <p> Yes...I reproduced the Minecraft again based on my previous program... But this time the rendering effects and efficiency were heavily improved (shadow mapping, 200 FPS, diverse customizable materials, etc.). The caves were generated procedurally by using 3D simplex noise algorithm.</p> -->
-                        <p> I tried to develope a simple but nice
-                            looking Minecraft using OpenGL within only one day. It supports infinite terrain, shadow mappimg as well as diverse customizable materials. The scene can be rendered very efficiently (around 150 FPS). The caves were generated procedurally by using 3D simplex noise algorithm. Moreover, the players can freely
-                            construct their own buildings. </p>
-                    </td>
-                </tr>
+
                 <!-- project -->
                 <tr>
                     <td style="padding:20px; width:20%;vertical-align:middle">
                         <img src='image/project3.png' width="200">
                     </td>
                     <td style="padding:20px;width:75%;vertical-align:middle">
-                        <projecttitle>SVM via Sequential Minimal Optimization. 2017</projecttitle>
+                        <projecttitle>[Demo & tutorial] SVM via Sequential Minimal Optimization. 2017</projecttitle>
                         <br>
                         <p></p>
                         <p> This SVM visualization system was programmed using C++ and Qt, which was originally used for
                             my Numerical Optimization course at UCAS. The binary classification was solved by Sequential
-                            Minimal Optimization (SMO). <a
-                                    href="https://www.bilibili.com/video/BV1Sb411k7c3">[video]</a></p>
+                            Minimal Optimization (SMO).</p>
+                             <a href="https://www.bilibili.com/video/BV1Sb411k7c3">[video]</a>
                     </td>
                 </tr>
                 </tbody>
