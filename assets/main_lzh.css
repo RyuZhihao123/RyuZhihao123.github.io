@@ -909,3 +909,11 @@ badge-float {
   height: 20px;
   margin-right: 8px;
 }
+
+
+.bib-block {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  border: 1px solid #838181;
+  padding: 3px 0px 3px 10px;  /* 顺序：上 (10px) 右 (15px) 下 (20px) 左 (25px) */
+}
