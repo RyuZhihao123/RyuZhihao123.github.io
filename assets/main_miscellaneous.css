@@ -802,7 +802,7 @@ table td {
   }
 }
 
-.badge-float {
+.badge-float-e {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.1rem;
@@ -814,6 +814,20 @@ table td {
   box-shadow: 2px 2px 3px #888;
   border-radius: 0.25em;
 }
+
+.badge-float-shashin {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  position: absolute;
+  color: white;
+  background-color: #009075;  /*00369f*/
+  font-size: .8em;
+  box-shadow: 2px 2px 3px #888;
+  border-radius: 0.25em;
+}
+
 
 
 
