@@ -799,6 +799,8 @@ table td {
     object-fit: cover;
     margin-top: 1.7em;
     border-radius: 0.25em;
+    user-select: none; /* 禁止选取 */
+    -webkit-user-drag: none; /* 禁止拖动 */
   }
 }
 
