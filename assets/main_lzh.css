@@ -182,7 +182,7 @@ pre>code {
   * Wrapper 整个屏幕的空间范围。
   */
 .wrapper {
-  max-width: calc(1050px - 30px * 2);    /*calc(1000px - 30px * 2); */
+  max-width: calc(1000px - 30px * 2);    /*calc(1000px - 30px * 2); */
   margin-right: auto;
   margin-left: auto;
   padding-right: 30px;
