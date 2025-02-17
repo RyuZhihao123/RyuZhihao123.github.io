@@ -182,7 +182,7 @@ pre>code {
   * Wrapper 整个屏幕的空间范围。
   */
 .wrapper {
-  max-width: calc(1000px - 30px * 2);    /*calc(1000px - 30px * 2); */
+  max-width: calc(1050px - 30px * 2);    /*calc(1000px - 30px * 2); */
   margin-right: auto;
   margin-left: auto;
   padding-right: 30px;
@@ -870,8 +870,8 @@ badge-float {
 }
 
 .profile-photo img {
-  width: 120px;  /*120px;*/
-  max-height: 120px;
+  width: 130px;  /*120px;*/
+  max-height: 130px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0px 0px 5px #888;
