@@ -920,3 +920,28 @@ badge-float {
   border: 1px solid #838181;
   padding: 3px 0px 3px 10px;  /* 顺序：上 (10px) 右 (15px) 下 (20px) 左 (25px) */
 }
+
+
+/*滚动模块*/
+.horizontal-scroll {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+.scroll-content {
+  display: inline-flex;
+}
+
+.item {
+  min-width: 200px;
+  height: 100px;
+  background: #3498db;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  line-height: 100px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
