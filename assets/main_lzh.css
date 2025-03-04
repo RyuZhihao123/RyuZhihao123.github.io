@@ -260,10 +260,10 @@ table td {
   * Site header
   */
 .site-header {
+  position: relative; /*relative 不悬浮。 fixed 悬浮。*/
   border-top: 5px solid rgb(66.25, 66.25, 66.25);
   border-bottom: 1px solid #e8e8e8;
   min-height: 55.95px;
-  position: relative;
 }
 
 .site-title {
@@ -296,6 +296,7 @@ table td {
 .site-nav .page-link {
   color: #111;
   line-height: 1.5;
+  /* font-weight: bold; */
 }
 
 .site-nav .page-link:not(:last-child) {
@@ -804,7 +805,7 @@ table td {
 
 .paper-box-image {
   width: 100%;        /* 图片宽度设为100%以适应容器 */
-  max-width: 200px;   /* 限制最大宽度，避免图片过大 */
+  max-width: 210px;   /* 200px 限制最大宽度，避免图片过大 */
   height: auto;
 
   img {
@@ -813,6 +814,8 @@ table td {
     object-fit: cover;
     margin-top: 1.5em;
     border-radius: 0.25em;
+    user-select: none; /* 禁止选取 */
+    -webkit-user-drag: none; /* 禁止拖动 */
   }
 }
 
@@ -829,6 +832,7 @@ table td {
   color: white;
   background-color: #00369f;  /*00369f*/
   font-size: .8em;
+  font-weight: bold;
   box-shadow: 2px 2px 3px #888;
   border-radius: 0.25em;
 }
@@ -858,7 +862,7 @@ badge-float {
 }
 
 
-/* 个人间接栏 */
+/* 个人简介栏 */
 .profile-container {
   display: flex;
   gap: 20px;
@@ -928,20 +932,77 @@ badge-float {
   overflow-x: auto;
   white-space: nowrap;
   padding: 10px;
+  margin-bottom: 10px;
 }
 
 .scroll-content {
   display: inline-flex;
 }
 
-.item {
-  min-width: 200px;
-  height: 100px;
-  background: #3498db;
-  color: white;
-  font-size: 18px;
+.project-card {
+  width: 350px;
+  height: 210px;
+  border-radius: 10px;
+  overflow: hidden;
   text-align: center;
-  line-height: 100px;
+  background: white;
   margin-right: 10px;
+  /* 设定边框颜色 */
+  /* border: 2px solid #cecece;  */
+  /* transition: border-color 0.3s ease-in-out; */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+.project-card img {
+  margin-top: 5px;
+  /* width: 100%; */
+  height: 150px; /* 固定高度 */
+  object-fit: contain;
+  user-select: none; /* 禁止选取 */
+  -webkit-user-drag: none; /* 禁止拖动 */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+
+}
+.project-info {
+  padding: 0px;
+}
+.project-info h3 {
+  margin: 0px 0;
+  font-size: 17px;
+  text-shadow: 1px 0px 3px rgba(63, 62, 62, 0.5); /* 阴影偏移和颜色 */
+}
+.project-info p {
+  font-size: 14px;
+  color: #555;
+}
+
+.software-info-block {
+  font-size: 14px;
+  background-color: #f3faed;
   border-radius: 5px;
+  border: 1px solid #dbdbdb;
+  padding: 3px 0px 3px 10px;  /* 顺序：上 (10px) 右 (15px) 下 (20px) 左 (25px) */
+}
+
+
+/* 设置滚动条整体样式 */
+.horizontal-scroll::-webkit-scrollbar {
+  width: 8px; /* 纵向滚动条宽度 */
+  height: 8px; /* 横向滚动条高度 */
+}
+
+/* 滚动条轨道 */
+.horizontal-scroll::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+/* 滚动条滑块 */
+.horizontal-scroll::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+/* 滚动条滑块在 hover 时的样式 */
+.horizontal-scroll::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
