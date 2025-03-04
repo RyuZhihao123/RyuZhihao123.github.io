@@ -979,7 +979,7 @@ badge-float {
   font-size: 14px;
   background-color: #f3faed;
   border-radius: 5px;
-  border: 1px solid #dbdbdb;
+  border: 1px solid #bebebe;
   padding: 3px 0px 3px 10px;  /* 顺序：上 (10px) 右 (15px) 下 (20px) 左 (25px) */
 }
 
