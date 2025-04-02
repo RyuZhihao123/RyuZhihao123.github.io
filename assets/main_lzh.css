@@ -952,6 +952,7 @@ badge-float {
   /* border: 2px solid #cecece;  */
   /* transition: border-color 0.3s ease-in-out; */
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  padding-right: 3px;
 }
 .project-card img {
   margin-top: 5px;
@@ -969,6 +970,7 @@ badge-float {
 .project-info h3 {
   margin: 0px 0;
   font-size: 17px;
+  font-weight:normal;
   text-shadow: 1px 0px 3px rgba(63, 62, 62, 0.5); /* 阴影偏移和颜色 */
 }
 .project-info p {
@@ -1006,4 +1008,15 @@ badge-float {
 /* 滚动条滑块在 hover 时的样式 */
 .horizontal-scroll::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+
+.new-label {
+  display: inline-block;
+  background-color: rgb(161, 5, 62);
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 2px 2px;
+  border-radius: 4px;
 }
