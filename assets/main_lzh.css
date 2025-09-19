@@ -807,7 +807,8 @@ table td {
   width: 100%;        /* 图片宽度设为100%以适应容器 */
   max-width: 210px;   /* 200px 限制最大宽度，避免图片过大 */
   height: auto;
-
+  left: 6px;
+  position: relative; /* 关键：badge 相对于这个容器定位 */
   img {
     max-width: 250px;
     box-shadow: 3px 3px 6px #888;
@@ -826,17 +827,25 @@ table td {
 }
 
 
+
 .badge {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  display: flex;               /* 开启 flex */
+  align-items: center;         /* 垂直居中 */
+  justify-content: center;     /* 水平居中 */
+  
   position: absolute;
+  left: 0.5em;  /*顶到右侧 right: 0.5em; */
+
+  padding: 0 1rem;
   color: white;
-  background-color: #00369f;  /*00369f*/
+  background-color: #00369f;
   font-size: .8em;
   font-weight: bold;
   box-shadow: 2px 2px 3px #888;
   border-radius: 0.25em;
+  min-width: 2rem;
 }
+
 
 papertitle {
   font-family: "Segoe UI", Verdana, Helvetica, sans-serif;
@@ -941,8 +950,10 @@ badge-float {
 }
 
 .project-card {
+  /* width: 350px;
+  height: 210px; */
   width: 350px;
-  height: 210px;
+  height: 215px;
   border-radius: 10px;
   overflow: hidden;
   text-align: center;
@@ -979,12 +990,14 @@ badge-float {
 }
 
 .software-info-block {
-  font-size: 14px;
+  font-size: 15px;
   background-color: #f3faed;
   border-radius: 5px;
   border: 1px solid #bebebe;
   padding: 3px 0px 3px 10px;  /* 顺序：上 (10px) 右 (15px) 下 (20px) 左 (25px) */
 }
+
+
 
 
 /* 设置滚动条整体样式 */
