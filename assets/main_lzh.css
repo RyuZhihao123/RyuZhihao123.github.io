@@ -42,7 +42,10 @@
   /* 主色（与论文标题、会议角标同一套蓝） */
   --ui-accent: #00369f;
   --ui-accent-dark: #001f5c;
-  --ui-accent-soft: #eaf0fb;
+  --ui-accent-soft: #e3ecfb;
+
+  /* 页面底色：柔和浅蓝，白色卡片浮在上面 */
+  --ui-page-bg: #f2f6fc;
 
   /* 文字 */
   --ui-text: #1a1a1a;
@@ -944,11 +947,10 @@ badge-float {
    每条论文一个独立卡片：左侧缩略图 + 右侧文字
    外观参数统一在文件顶部的 :root 里调整
    ========================================================== */
-.paper-section-title {
-  margin: 26px 0 12px 0;
-  font-size: 17px;
-  font-weight: 600;
-  color: #111;
+
+/* 第一篇与上方"* Primary Authors"图例之间留间距（原来的分组标题已去掉） */
+.paper-card:first-of-type {
+  margin-top: 20px;
 }
 
 .paper-card {
@@ -1232,6 +1234,11 @@ html {
   scroll-behavior: smooth; /* 点击导航里的锚点平滑滚动 */
 }
 
+/* 页面底色：柔和浅蓝 */
+body {
+  background-color: var(--ui-page-bg);
+}
+
 ::selection {
   background: var(--ui-accent-soft);
 }
@@ -1325,12 +1332,15 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 24px;
-  margin: 20px auto 30px;
-  padding: 20px;
+  /* 下边距与卡片间距对齐，避免名片下方空出一大块 */
+  margin: 20px auto 18px;
+  padding: 18px 20px;
   box-sizing: border-box;
-  background: linear-gradient(180deg, #f6f9fe 0%, #ffffff 100%);
+  /* 个人信息名片：纯白，与页面浅蓝底色形成层次 */
+  background: var(--ui-surface);
   border: 1px solid var(--ui-line);
   border-radius: var(--ui-radius);
+  box-shadow: var(--ui-shadow);
 }
 
 .profile-info {
@@ -1342,6 +1352,11 @@ a:hover {
   font-size: 15px;
   line-height: 1.75;
   color: var(--ui-text);
+}
+
+/* 名片内最后一行（邮箱 / 社交链接）收紧行高，减小下方留白 */
+.profile-info>p:last-child {
+  line-height: 1.5;
 }
 
 .profile-photo {
@@ -1362,7 +1377,9 @@ a:hover {
 
 .icon-link {
   color: var(--ui-accent);
-  padding: 2px 4px;
+  /* 字号与名片正文一致，避免行盒被撑高、底部多出缝隙 */
+  font-size: 15px;
+  padding: 1px 5px;
   border-radius: 6px;
   transition: background-color .15s ease;
 }
@@ -1457,9 +1474,9 @@ a:hover {
   width: 100%;
   box-sizing: border-box;
   margin: 16px auto 12px;
-  padding: 14px 18px;
+  padding: 12px 18px;
   font-size: 15px;
-  line-height: 1.75;
+  line-height: 1.55;
   color: var(--ui-text);
   background-color: var(--ui-accent-soft);
   border: 1px solid #d9e3f8;
@@ -1474,7 +1491,7 @@ a:hover {
 }
 
 .software-info-block li {
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .software-info-block li:last-child {
