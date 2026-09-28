@@ -1,3 +1,68 @@
+/* ==========================================================
+   全局排版参数 (Global layout parameters)
+   ----------------------------------------------------------
+   改这里的数值就能整体调整版面，不需要动 HTML。
+   ========================================================== */
+:root {
+  /* ---------- 论文卡片 Publications ---------- */
+
+  /* 卡片之间的垂直间距（调小更紧凑） */
+  --paper-card-gap: 18px;
+
+  /* 卡片内边距 */
+  --paper-card-padding: 16px;
+
+  /* 卡片圆角 */
+  --paper-card-radius: 10px;
+
+  /* 卡片边框与背景色 */
+  --paper-card-border: 1px solid #e5e7eb;
+  --paper-card-bg: #ffffff;
+
+  /* 卡片阴影：常态 / 鼠标悬停 */
+  --paper-card-shadow: 0 1px 3px rgba(16, 24, 40, .06), 0 1px 2px rgba(16, 24, 40, .04);
+  --paper-card-shadow-hover: 0 6px 18px rgba(16, 24, 40, .12);
+
+  /* 左侧缩略图宽度 */
+  --paper-card-thumb-width: 200px;
+
+  /* 会议角标（NeurIPS / CVPR ...）开关：
+     none  = 不显示（默认）
+     block = 显示在缩略图上方 */
+  --paper-card-badge-display: none;
+
+  /* 论文标题颜色 */
+  --paper-card-title-color: #00369f;
+
+  /* 卡片内文字行（作者 / 会议 / 链接）之间的间距 */
+  --paper-card-line-gap: 4px;
+
+  /* ---------- 全站通用视觉常量 ---------- */
+
+  /* 主色（与论文标题、会议角标同一套蓝） */
+  --ui-accent: #00369f;
+  --ui-accent-dark: #001f5c;
+  --ui-accent-soft: #eaf0fb;
+
+  /* 文字 */
+  --ui-text: #1a1a1a;
+  --ui-text-soft: #5b6472;
+
+  /* 线 / 面 */
+  --ui-line: #e5e7eb;
+  --ui-surface: #ffffff;
+
+  /* 圆角与阴影 */
+  --ui-radius: 10px;
+  --ui-radius-sm: 6px;
+  --ui-shadow: 0 1px 3px rgba(16, 24, 40, .06), 0 1px 2px rgba(16, 24, 40, .04);
+  --ui-shadow-hover: 0 6px 18px rgba(16, 24, 40, .12);
+
+  /* ---------- 旧版行式条目（project.html 仍在使用） ---------- */
+  --paper-gap: 38px;
+  --paper-image-offset: 1.5em;
+}
+
 /**
  * Reset some basic elements
  */
@@ -800,7 +865,9 @@ table td {
   flex-direction: row;
   flex-wrap: wrap;
   border-bottom: 1px #efefef solid;
-  padding: 1em 0 2em 0;
+  /* 条目之间的垂直间距完全由全局参数 --paper-gap 控制 */
+  padding: 0;
+  margin: 0 0 var(--paper-gap) 0;
 }
 
 .paper-box-image {
@@ -813,7 +880,7 @@ table td {
     max-width: 250px;
     box-shadow: 3px 3px 6px #888;
     object-fit: cover;
-    margin-top: 1.5em;
+    margin-top: var(--paper-image-offset);
     border-radius: 0.25em;
      /* 禁止选取和拖动 */
     /* user-select: none;
@@ -869,6 +936,125 @@ badge-float {
   font-size: 12px;
   box-shadow: 2px 2px 3px #888;
   border-radius: 0.25em;
+}
+
+
+/* ==========================================================
+   论文卡片 (Publications)
+   每条论文一个独立卡片：左侧缩略图 + 右侧文字
+   外观参数统一在文件顶部的 :root 里调整
+   ========================================================== */
+.paper-section-title {
+  margin: 26px 0 12px 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: #111;
+}
+
+.paper-card {
+  display: flex;
+  align-items: center;      /* 左侧图片相对右侧文字垂直居中 */
+  gap: var(--paper-card-padding);
+  padding: var(--paper-card-padding);
+  margin: 0 0 var(--paper-card-gap) 0;
+  background: var(--paper-card-bg);
+  border: var(--paper-card-border);
+  border-radius: var(--paper-card-radius);
+  box-shadow: var(--paper-card-shadow);
+  transition: box-shadow .18s ease, transform .18s ease;
+}
+
+.paper-card:hover {
+  box-shadow: var(--paper-card-shadow-hover);
+  transform: translateY(-2px);
+}
+
+/* 左侧缩略图（会议角标排在图片上方，不覆盖图片） */
+.paper-card__thumb {
+  flex: 0 0 var(--paper-card-thumb-width);
+  width: var(--paper-card-thumb-width);
+}
+
+.paper-card__thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .16);
+}
+
+/* 会议角标 与 级别标签 共用同一套尺寸，保证两者高度完全一致 */
+.paper-card__badge,
+.paper-card__tag {
+  padding: 2px 8px;
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: bold;
+  color: #fff;
+  border-radius: .25em;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, .35);
+  white-space: nowrap;
+}
+
+/* 会议角标：位于缩略图上方，宽度随文字收缩。
+   显示/隐藏由顶部 :root 里的 --paper-card-badge-display 控制。 */
+.paper-card__badge {
+  display: var(--paper-card-badge-display, none);
+  width: fit-content;
+  margin-bottom: 6px;
+  background-color: #00369f;
+}
+
+/* 右侧文字区 */
+.paper-card__body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.paper-card__title {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--paper-card-title-color);
+}
+
+.paper-card__authors,
+.paper-card__venue {
+  margin: 0 0 var(--paper-card-line-gap) 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #111;
+}
+
+.paper-card__venue i {
+  color: #555;
+}
+
+.paper-card__links {
+  /* 与作者 / 会议之间的间距保持一致 */
+  margin-top: var(--paper-card-line-gap);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* 级别标签（Core-A* 等）：跟在链接行里 */
+.paper-card__tag {
+  display: inline-block;
+  background-color: #8a8a8a;
+}
+
+/* 窄屏：缩略图移到上方，卡片改为纵向排列 */
+@media screen and (max-width: 700px) {
+  .paper-card {
+    flex-direction: column;
+  }
+
+  .paper-card__thumb {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 320px;
+  }
 }
 
 
@@ -1032,4 +1218,339 @@ badge-float {
   font-weight: bold;
   padding: 2px 2px;
   border-radius: 4px;
+}
+
+
+/* ==========================================================
+   界面美化 / UI polish
+   ----------------------------------------------------------
+   这一层统一全站的视觉语言（颜色、圆角、阴影、间距）。
+   放在文件末尾，用于覆盖前面来自默认主题的旧样式。
+   ========================================================== */
+
+html {
+  scroll-behavior: smooth; /* 点击导航里的锚点平滑滚动 */
+}
+
+::selection {
+  background: var(--ui-accent-soft);
+}
+
+/* ---------- 链接 ---------- */
+a,
+a:visited {
+  color: var(--ui-accent);
+  text-decoration: none;
+  transition: color .15s ease;
+}
+
+a:hover {
+  color: var(--ui-accent-dark);
+  text-decoration: underline;
+}
+
+/* ---------- 顶部导航 ---------- */
+.site-header {
+  border-top: none;
+  border-bottom: 1px solid var(--ui-line);
+  background: rgba(255, 255, 255, .9);
+  backdrop-filter: saturate(180%) blur(8px);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, .03);
+}
+
+/* 顶部那条深灰色粗边换成主色渐变条 */
+.site-header::before {
+  content: "";
+  display: block;
+  height: 4px;
+  background: linear-gradient(90deg, var(--ui-accent), #3f7ad6);
+}
+
+.site-title,
+.site-title:visited {
+  color: var(--ui-accent);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.site-nav .page-link {
+  color: var(--ui-text);
+  transition: color .15s ease, background-color .15s ease;
+}
+
+.site-nav .page-link:hover {
+  color: var(--ui-accent);
+  text-decoration: none;
+}
+
+@media screen and (min-width: 601px) {
+  .site-nav .page-link {
+    padding: 3px 10px;
+    border-radius: 999px;
+  }
+
+  .site-nav .page-link:not(:last-child) {
+    margin-right: 4px;
+  }
+
+  .site-nav .page-link:hover {
+    background-color: var(--ui-accent-soft);
+  }
+}
+
+/* ---------- 区块标题：左侧主色竖条 ---------- */
+.post-header {
+  margin-bottom: 18px;
+  padding-left: 12px;
+  border-bottom: none;
+  border-left: 4px solid var(--ui-accent);
+}
+
+.post-title {
+  font-size: 24px;
+  line-height: 1.35;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+/* 原来的移动端规则把标题放大到 36px，这里改回比桌面更小 */
+@media screen and (max-width: 800px) {
+  .post-title {
+    font-size: 21px;
+  }
+}
+
+/* ---------- 个人简介 ---------- */
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 20px auto 30px;
+  padding: 20px;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #f6f9fe 0%, #ffffff 100%);
+  border: 1px solid var(--ui-line);
+  border-radius: var(--ui-radius);
+}
+
+.profile-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.profile-info p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--ui-text);
+}
+
+.profile-photo {
+  flex: 0 0 auto;
+}
+
+.profile-photo img {
+  display: block;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 12px rgba(16, 24, 40, .18);
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.icon-link {
+  color: var(--ui-accent);
+  padding: 2px 4px;
+  border-radius: 6px;
+  transition: background-color .15s ease;
+}
+
+.icon-link:hover {
+  background-color: var(--ui-accent-soft);
+  text-decoration: none;
+}
+
+/* ---------- 精选软件：横向卡片 ---------- */
+.horizontal-scroll {
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 6px 6px 16px;
+  margin-bottom: 10px;
+  scroll-snap-type: x proximity;
+}
+
+.scroll-content {
+  display: inline-flex;
+  gap: 12px;
+}
+
+.project-card {
+  width: 350px;
+  height: auto;
+  min-height: 210px;
+  margin-right: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+  background: var(--ui-surface);
+  border: 1px solid var(--ui-line);
+  border-radius: var(--ui-radius);
+  box-shadow: var(--ui-shadow);
+  transition: box-shadow .18s ease, transform .18s ease;
+  scroll-snap-align: start;
+}
+
+.project-card:hover {
+  box-shadow: var(--ui-shadow-hover);
+  transform: translateY(-2px);
+}
+
+.project-card img {
+  display: block;
+  width: 100%;
+  height: 148px;
+  margin: 0;
+  object-fit: contain;
+  background-color: #f7f8fa;
+  border-bottom: 1px solid var(--ui-line);
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.project-info {
+  padding: 10px 12px 14px;
+}
+
+.project-info h3 {
+  margin: 0 0 4px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ui-text);
+  text-shadow: none;
+  white-space: normal;
+}
+
+.project-info p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--ui-text-soft);
+}
+
+.new-label {
+  display: inline-block;
+  padding: 1px 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .3px;
+  color: #fff;
+  background-color: #c2185b;
+  border-radius: 4px;
+  vertical-align: 1px;
+}
+
+/* ---------- 说明块：改成浅蓝 callout ---------- */
+.software-info-block {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 16px auto 12px;
+  padding: 14px 18px;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--ui-text);
+  background-color: var(--ui-accent-soft);
+  border: 1px solid #d9e3f8;
+  border-left: 4px solid var(--ui-accent);
+  border-radius: var(--ui-radius-sm);
+}
+
+.software-info-block ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.software-info-block li {
+  margin-bottom: 6px;
+}
+
+.software-info-block li:last-child {
+  margin-bottom: 0;
+}
+
+.software-info-block li::marker {
+  color: var(--ui-accent);
+}
+
+/* ---------- 工作经历 ---------- */
+.default-container {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 20px auto;
+  padding: 16px;
+  box-sizing: border-box;
+  background: var(--ui-surface);
+  border: 1px solid var(--ui-line);
+  border-radius: var(--ui-radius);
+  box-shadow: var(--ui-shadow);
+}
+
+.default-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.default-info p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--ui-text);
+}
+
+.default-photo {
+  flex: 0 0 auto;
+}
+
+.default-photo img {
+  display: block;
+  /* 不锁定宽高，按原始比例缩放。tencent.jpg 是 384x192 的 2:1 横图，
+     若用固定正方形 + object-fit: cover 会把左右两侧各裁掉一大块。 */
+  width: auto;
+  height: auto;
+  max-width: 140px;
+  max-height: 110px;
+  border-radius: var(--ui-radius-sm);
+  box-shadow: 0 1px 4px rgba(16, 24, 40, .12);
+}
+
+/* ---------- 页脚 ---------- */
+.site-footer {
+  border-top: 1px solid var(--ui-line);
+  padding: 28px 0 34px;
+  margin-top: 24px;
+}
+
+.footer-heading {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--ui-text-soft);
+  text-align: center;
+}
+
+/* ---------- 窄屏：卡片纵向排列 ---------- */
+@media screen and (max-width: 700px) {
+  .profile-container,
+  .default-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .project-card {
+    width: 280px;
+  }
 }

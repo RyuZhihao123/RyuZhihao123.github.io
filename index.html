@@ -4,26 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-  <title>RyuZhihao123</title>
-  <meta name="generator" content="Jekyll v4.4.1" />
-  <meta property="og:title" content="About" />
-  <meta property="og:locale" content="en_US" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zhihao Liu</title>
   <meta name="description"
-    content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-  <meta property="og:description"
-    content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-  <link rel="canonical" href="http://localhost:4000/about/" />
-  <meta property="og:url" content="http://localhost:4000/" />
-  <meta property="og:site_name" content="RyuZhihao123" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary" />
-  <meta property="twitter:title" content="About" />
-  <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"About","name":"RyuZhihao123","url":"http://localhost:4000/about/"}</script>
-  <!-- End Jekyll SEO tag -->
-  <link rel="stylesheet" href="/assets/main_lzh.css">
-  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="RyuZhihao123" />
+    content="Zhihao Liu - computer graphics, geometry modeling and 3D vision." />
+  <link rel="stylesheet" href="assets/main_lzh.css">
 </head>
 
 <body>
@@ -31,7 +16,7 @@
   <!-- Banner-->
   <header class="site-header" role="banner">
     <div class="wrapper">
-      <a class="site-title" rel="author" href="/">Homepage</a>
+      <a class="site-title" rel="author" href="index.html">Homepage</a>
       <nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
@@ -43,7 +28,7 @@
           </span>
         </label>
         <div class="trigger">
-          <a class="page-link" href="/">&#127968;Home</a>
+          <a class="page-link" href="index.html">&#127968;Home</a>
           <a class="page-link" href="#publication">&#128194;Publication</a>
           <a class="page-link" href="pages/project.html">&#128092;Project</a>
           <a class="page-link" href="pages/painting.html">&#127810;Painting</a>
@@ -62,7 +47,7 @@
       <div class="profile-container">
         <div class="profile-info">
           <header class="post-header">
-            <h1 class="post-title">&#128169; <b>Zhihao Liu</b></h1>
+            <h1 class="post-title">&#128194; <b>Zhihao Liu</b></h1>
           </header>
           <p>
             Hello this is Zhihao. I did my PhD from <b><a
@@ -106,7 +91,7 @@
       <!-- Featured Project -->
       <article class="post" style="margin-top: 20px;">
         <header class="post-header">
-          <h1 class="post-title">&#129351; <b>My Featured Software</b></h1>
+          <h1 class="post-title">&#128194; <b>My Featured Software</b></h1>
         </header>
 
 
@@ -178,14 +163,13 @@
         </div>
 
 
-        <div class="software-info-block"
-          style="width:90%; margin:auto; margin-top: 10px; margin-bottom: 10px; padding-top: 10px; padding-left: 10px; padding-right: 20px;">
+        <div class="software-info-block">
           <ul>
             <li>The above are some of <b>my featured free software</b> (not papers), built purely on graphics algorithms <b>in either C++ or C#.</b></li>
             <li>
-              You can easily use them on Windows PCs without any configuration.
-              I am so proud of them, and <b>some have been used by many SIGGRAPH/CVPR papers from external labs</b> (e.g., <a href="https://vcc.tech/research/2021/TreePartNet">TreePartNet</a>) to
-              create 3D datasets.</li>
+              They can be easily used on Windows PCs without any configuration.
+<!--               I am so proud of them, and <b>some have been used by many SIGGRAPH/CVPR papers from external labs</b> (e.g., <a href="https://vcc.tech/research/2021/TreePartNet">TreePartNet</a>) to
+              create 3D datasets.</li> -->
             <li>See <a href="pages/project.html">[More Projects]</a> for more toolkits I developed. Feel free to download and explore! ^_^</li>
           </ul>
         </div>
@@ -221,228 +205,164 @@
             background-color:#f3f7ff; color:black; border:1px solid #cccccc; border-radius:0.3em; ">
             Other Supportive-Role Papers
           </div> -->
-        <div class="post-comment" style="margin-top: 10px; ">
-          <p>
-            <!-- <b>* indicates co-first authors with equal contribution.</b> <br><br> -->
-          <b>[1] Recent Papers:</b>
-          </p>
-        </div>
+        <h3 class="paper-section-title">[1] Recent Papers:</h3>
+        <!-- <b>* indicates co-first authors with equal contribution.</b> -->
+
+        <!-- *******  PAPER - 1  ******* -->
+        <article class="paper-card">
+          <div class="paper-card__thumb">
+            <span class="paper-card__badge">NeurIPS</span>
+            <img src='images/PaperFigs/paper_neurips26.png' alt="sym" width="100%">
+          </div>
+          <div class="paper-card__body">
+            <h3 class="paper-card__title">Visual-to-Executable Procedural Reconstruction of Buildings.</h3>
+            <p class="paper-card__authors">Zichong Zhu, <b>Zhihao Liu</b>, Zhanglin Cheng.</p>
+            <p class="paper-card__venue"><i>The Fortieth Annual Conference on Neural Information Processing Systems</i> <b>(NeurIPS)</b>. 2026.</p>
+            <div class="paper-card__links"><span class="paper-card__tag">Core-A*, CCF-A</span>&nbsp Accepted on Dec.29th. [PDF][GitHub]</div>
+          </div>
+        </article>
 
 
         <!-- *******  PAPER - 1  ******* -->
-        <div class="paper-container" style="margin-top: -10px;">
-          <div class="paper-box-image">
-            <div class="badge">AAAI</div>
-            <!-- <div class="badge" style="margin-left: 5.5em; background-color: #5588ff;">CCF-A</div> -->
+        <article class="paper-card">
+          <div class="paper-card__thumb">
+            <span class="paper-card__badge">AAAI</span>
             <img src='images/PaperFigs/fig_aaai2026.png' alt="sym" width="100%">
           </div>
-          <div class="paper-box-text">
-            <papertitle>LandCraft: Designing the Structured 3D Landscapes via Text Guidance.</papertitle> <br>
-            <papercontent><b>Zhihao Liu*</b>, Fang Liu*, Weihao Xuan, Naoto Yokoya. <br>
-              <i>The Fortieth Annual AAAI Conference on Artificial Intelligence</i> (AAAI). 2026. <br>
-
-              &#10140; <badge-float> &nbsp;Core-A*, CCF-A </badge-float>&nbsp
-              Accepted on Nov.8th -- <a href="https://drive.google.com/file/d/1fRHikRohinDkBq6ooU7dr1F6dViNW5nB/view?usp=sharing">[PDF]</a>
-              <a href="https://drive.google.com/file/d/19YhIlKtvT-ArlBtoxMCijB1eF_LOLRHO/view?usp=sharing">[Video]</a>
-              <a href="https://github.com/RyuZhihao123/LandCraft_26">[GitHub(TBD)]</a>
-
-            </papercontent>
+          <div class="paper-card__body">
+            <h3 class="paper-card__title">LandCraft: Designing the Structured 3D Landscapes via Text Guidance.</h3>
+            <p class="paper-card__authors"><b>Zhihao Liu*</b>, Fang Liu*, Weihao Xuan, Naoto Yokoya.</p>
+            <p class="paper-card__venue"><i>The Fortieth Annual AAAI Conference on Artificial Intelligence</i> <b>(AAAI)</b>. 2026.</p>
+            <div class="paper-card__links"><span class="paper-card__tag">Core-A*, CCF-A</span>&nbsp <a href="https://drive.google.com/file/d/1fRHikRohinDkBq6ooU7dr1F6dViNW5nB/view?usp=sharing">[PDF]</a> <a href="https://github.com/RyuZhihao123/LandCraft_26">[GitHub]</a> <a href="https://drive.google.com/file/d/19YhIlKtvT-ArlBtoxMCijB1eF_LOLRHO/view?usp=sharing">[Demo video]</a></div>
           </div>
-        </div>
+        </article>
 
 
-        <div class="paper-container" style="margin-top: -10px;">
-          <div class="paper-box-image">
-            <div class="badge">NeurIPS</div>
-            <!-- <div class="badge" style="margin-left: 5.5em; background-color: #5588ff;">CCF-B</div> -->
+        <article class="paper-card">
+          <div class="paper-card__thumb">
+            <span class="paper-card__badge">NeurIPS</span>
             <img src='images/paper_neurips25.png' alt="sym" width="100%">
           </div>
-          <div class="paper-box-text">
-            <papertitle>DisasterM3: A Remote Sensing Vision-Language Dataset for Disaster Assessment. </papertitle> <br>
-            <papercontent> Junjue Wang*, Weihao Xuan*, Heli Qi, <b>Zhihao Liu</b>, Kunyi Liu, Yuhan Wu, Hongruixuan
-              Chen, Jian Song, Junshi Xia, Zhuo Zheng, Naoto Yokoya. <br>
-              <i>The Thirty-ninth Annual Conference on Neural Information Processing Systems</i> (NeurIPS). 2025.<br>
-
-              &#10140; <badge-float> &nbsp;Core A*, CCF-A </badge-float>&nbsp
-              <a href="https://arxiv.org/abs/2505.21089">[pdf]</a>
-              <a href="https://github.com/Junjue-Wang/DisasterM3">[GitHub]</a>
-            </papercontent>
+          <div class="paper-card__body">
+            <h3 class="paper-card__title">DisasterM3: A Remote Sensing Vision-Language Dataset for Disaster Assessment.</h3>
+            <p class="paper-card__authors">Junjue Wang*, Weihao Xuan*, Heli Qi, <b>Zhihao Liu</b>, Kunyi Liu, Yuhan Wu, Hongruixuan Chen, Jian Song, Junshi Xia, Zhuo Zheng, Naoto Yokoya.</p>
+            <p class="paper-card__venue"><i>The Thirty-ninth Annual Conference on Neural Information Processing Systems</i> <b>(NeurIPS)</b>. 2025.</p>
+            <div class="paper-card__links"><span class="paper-card__tag">Core A*, CCF-A</span>&nbsp <a href="https://arxiv.org/abs/2505.21089">[pdf]</a> <a href="https://github.com/Junjue-Wang/DisasterM3">[GitHub]</a></div>
           </div>
-        </div>
+        </article>
 
         <!-- *******  PAPER - 1  ******* -->
-        <div class="paper-container" style="margin-top: -10px;">
-          <div class="paper-box-image">
-            <div class="badge">CVPR</div>
-            <!-- <div class="badge" style="margin-left: 5.5em; background-color: #5588ff;">CCF-A</div> -->
+        <article class="paper-card">
+          <div class="paper-card__thumb">
+            <span class="paper-card__badge">CVPR</span>
             <img src='images/PaperFigs/fig_cvpr2025.png' alt="sym" width="100%">
           </div>
-          <div class="paper-box-text">
-            <papertitle>Neural Hierarchical Decomposition for Single Image Plant Modeling.</papertitle> <br>
-            <papercontent><b>Zhihao Liu</b>, Zhanglin Cheng, Naoto Yokoya. <br>
-              <i>IEEE/CVF Computer Vision and Pattern Recognition Conference</i> (CVPR). 2025. <br>
-
-              &#10140; <badge-float> &nbsp;Core-A*, CCF-A </badge-float>&nbsp
-              <a href="https://drive.google.com/file/d/1na9mgIBadS6J42LOLe9DBNHtdtGPwpDN/view?usp=sharing">[pdf]</a>
-              <a href="./pages/projects/boxplant/index.html">[Project page]</a>
-              <a href="https://github.com/RyuZhihao123/Plant-Recon-25">[GitHub]</a>
-            </papercontent>
+          <div class="paper-card__body">
+            <h3 class="paper-card__title">Neural Hierarchical Decomposition for Single Image Plant Modeling.</h3>
+            <p class="paper-card__authors"><b>Zhihao Liu</b>, Zhanglin Cheng, Naoto Yokoya.</p>
+            <p class="paper-card__venue"><i>IEEE/CVF Computer Vision and Pattern Recognition Conference</i> <b>(CVPR)</b>. 2025.</p>
+            <div class="paper-card__links"><span class="paper-card__tag">Core-A*, CCF-A</span>&nbsp <a href="https://drive.google.com/file/d/1na9mgIBadS6J42LOLe9DBNHtdtGPwpDN/view?usp=sharing">[pdf]</a> <a href="./pages/projects/boxplant/index.html">[Project page]</a> <a href="https://github.com/RyuZhihao123/Plant-Recon-25">[GitHub]</a></div>
           </div>
-        </div>
+        </article>
 
         <!-- *******  PAPER - 1  ******* -->
-        <div class="paper-container" style="margin-top: -10px;">
-          <div class="paper-box-image">
-            <div class="badge">CHI</div>
-            <!-- <div class="badge" style="margin-left: 5.5em; background-color: #5588ff;">CCF-A</div> -->
+        <article class="paper-card">
+          <div class="paper-card__thumb">
+            <span class="paper-card__badge">CHI</span>
             <img src='images/PaperFigs/fig_chi2024.png' alt="sym" width="100%">
           </div>
-          <div class="paper-box-text">
-            <papertitle>DeepTreeSketch: Neural Graph Prediction for Faithful 3D Tree Modeling from Sketches.
-            </papertitle> <br>
-            <papercontent><b>Zhihao Liu</b>, Yu Li, Fangyuan Tu, Ruiyuan Zhang, Zhanglin Cheng, Naoto Yokoya. <br>
-              <i>ACM CHI conference on Human Factors in Computing Systems</i> (CHI). 2024. <br>
-
-              &#10140; <badge-float> &nbsp;Core-A*, CCF-A </badge-float>&nbsp
-              <!-- <a href="https://ryuzhihao123.github.io/">[pdf]</a> -->
-              <!-- [pdf][video][codes] <b>(Accepted on Mar.13, 2024. Will be updated soon.)</b> -->
-              <a href="https://dl.acm.org/doi/10.1145/3613904.3642125">[pdf]</a>
-              <a href="https://drive.google.com/file/d/1Kvj47Ckju43i9IpJ6OjWzE2ZkxVbOFTX/view?usp=sharing">[video1]</a>
-              <a href="https://drive.google.com/file/d/1YNooKZMfFbwdyMv2JzuzhmUu7tJSMahL/view?usp=sharing">[video2]</a>
-              <a href="https://github.com/RyuZhihao123/CHITreeProject">[GitHub]</a>
-            </papercontent>
+          <div class="paper-card__body">
+            <h3 class="paper-card__title">DeepTreeSketch: Neural Graph Prediction for Faithful 3D Tree Modeling from Sketches.</h3>
+            <p class="paper-card__authors"><b>Zhihao Liu</b>, Yu Li, Fangyuan Tu, Ruiyuan Zhang, Zhanglin Cheng, Naoto Yokoya.</p>
+            <p class="paper-card__venue"><i>ACM CHI conference on Human Factors in Computing Systems</i> <b>(CHI)</b>. 2024.</p>
+            <div class="paper-card__links"><span class="paper-card__tag">Core-A*, CCF-A</span>&nbsp <!-- <a href="https://ryuzhihao123.github.io/">[pdf]</a> --> <!-- [pdf][video][codes] <b>(Accepted on Mar.13, 2024. Will be updated soon.)</b> --> <a href="https://dl.acm.org/doi/10.1145/3613904.3642125">[pdf]</a> <a href="https://drive.google.com/file/d/1Kvj47Ckju43i9IpJ6OjWzE2ZkxVbOFTX/view?usp=sharing">[video1]</a> <a href="https://drive.google.com/file/d/1YNooKZMfFbwdyMv2JzuzhmUu7tJSMahL/view?usp=sharing">[video2]</a> <a href="https://github.com/RyuZhihao123/CHITreeProject">[GitHub]</a></div>
           </div>
-        </div>
+        </article>
 
         <!-- *******  PAPER - 2  ******* -->
-        <div class="paper-container">
-          <div class="paper-box-image">
-            <div class="badge">CVPR</div>
-            <!-- <div class="badge" style="margin-left: 5.5em; background-color: #5588ff;">CCF-A</div> -->
+        <article class="paper-card">
+          <div class="paper-card__thumb">
+            <span class="paper-card__badge">CVPR</span>
             <img src='images/paper_cv24.png' alt="sym" width="100%">
           </div>
-          <div class="paper-box-text">
-            <papertitle>SVDTree: Semantic Voxel Diffusion for 3D Tree Generation. </papertitle> <br>
-            <papercontent>Yuan Li*, <b>Zhihao Liu* <i>(equal contribution)</i></b>, Bedrich Benes, Xiaopeng Zhang, Jianwei
-              Guo. <br>
-              <i>IEEE/CVF Computer Vision and Pattern Recognition Conference</i> (CVPR). 2024.<br>
-
-              &#10140; <badge-float> &nbsp;Core-A*, CCF-A </badge-float>&nbsp
-              <!-- <a href="https://ryuzhihao123.github.io/">[pdf]</a> -->
-              <!-- [pdf][codes] <b>(Conditionally Accepted. Will be updated soon.)</b> -->
-              <a
-                href="https://openaccess.thecvf.com/content/CVPR2024/papers/Li_SVDTree_Semantic_Voxel_Diffusion_for_Single_Image_Tree_Reconstruction_CVPR_2024_paper.pdf">[pdf]</a>
-              <a href="https://jianweiguo.net/publications/papers/2024_CVPR_SVDTree_supp.pdf">[suppl]</a>
-              <a href="https://github.com/RyuZhihao123/SVDTree">[GitHub]</a>
-            </papercontent>
+          <div class="paper-card__body">
+            <h3 class="paper-card__title">SVDTree: Semantic Voxel Diffusion for 3D Tree Generation.</h3>
+            <p class="paper-card__authors">Yuan Li*, <b>Zhihao Liu* <i>(equal contribution)</i></b>, Bedrich Benes, Xiaopeng Zhang, Jianwei Guo.</p>
+            <p class="paper-card__venue"><i>IEEE/CVF Computer Vision and Pattern Recognition Conference</i> <b>(CVPR)</b>. 2024.</p>
+            <div class="paper-card__links"><span class="paper-card__tag">Core-A*, CCF-A</span>&nbsp <!-- <a href="https://ryuzhihao123.github.io/">[pdf]</a> --> <!-- [pdf][codes] <b>(Conditionally Accepted. Will be updated soon.)</b> --> <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Li_SVDTree_Semantic_Voxel_Diffusion_for_Single_Image_Tree_Reconstruction_CVPR_2024_paper.pdf">[pdf]</a> <a href="https://jianweiguo.net/publications/papers/2024_CVPR_SVDTree_supp.pdf">[suppl]</a> <a href="https://github.com/RyuZhihao123/SVDTree">[GitHub]</a></div>
           </div>
-        </div>
+        </article>
 
-        <div class="post-comment" style="margin-top: 0px;">
-          <p><b>[2] Before 2023:</b></p>
-        </div>
+        <h3 class="paper-section-title">[2] Before 2023:</h3>
 
-        <div class="paper-container" style="margin-top: -10px;">
-          <div class="paper-box-image">
-            <div class="badge">CGF</div>
-            <!-- <div class="badge" style="margin-left: 5.5em; background-color: #5588ff;">CCF-B</div> -->
+        <article class="paper-card">
+          <div class="paper-card__thumb">
+            <span class="paper-card__badge">CGF</span>
             <img src='images/paper_cgf24.png' alt="sym" width="100%">
           </div>
-          <div class="paper-box-text">
-            <papertitle>VRTree: Example-Based 3D Interactive Tree Modeling in Virtual Reality. </papertitle> <br>
-            <papercontent> Di Wu, Mingxin Yang, <b>Zhihao Liu</b>, Fangyuan Tu, F. Liu, Zhanglin Cheng. <br>
-              <i>Computer Graphics Forum</i> (CGF). 2023.<br>
-
-              &#10140; <badge-float> &nbsp;CCF-B Journal. </badge-float>&nbsp
-              <a href="https://onlinelibrary.wiley.com/doi/10.1111/cgf.15254">[pdf]</a>
-            </papercontent>
+          <div class="paper-card__body">
+            <h3 class="paper-card__title">VRTree: Example-Based 3D Interactive Tree Modeling in Virtual Reality.</h3>
+            <p class="paper-card__authors">Di Wu, Mingxin Yang, <b>Zhihao Liu</b>, Fangyuan Tu, F. Liu, Zhanglin Cheng.</p>
+            <p class="paper-card__venue"><i>Computer Graphics Forum</i> <b>(CGF)</b>. 2023.</p>
+            <div class="paper-card__links"><span class="paper-card__tag">CCF-B Journal.</span>&nbsp <a href="https://onlinelibrary.wiley.com/doi/10.1111/cgf.15254">[pdf]</a></div>
           </div>
-        </div>
+        </article>
 
         <!-- *******  PAPER - 3  ******* -->
-        <div class="paper-container">
-          <div class="paper-box-image">
-            <div class="badge">ISMAR</div>
-            <!-- <div class="badge" style="margin-left: 5.5em; background-color: #5588ff;">CCF-B</div> -->
+        <article class="paper-card">
+          <div class="paper-card__thumb">
+            <span class="paper-card__badge">ISMAR</span>
             <img src='images/paper4.png' alt="sym" width="100%">
           </div>
-
-          <div class="paper-box-text">
-            <papertitle>BuildingSketch: Freehand Mid-Air Sketching for Building Modeling.</papertitle> <br>
-            <papercontent><b>Zhihao Liu</b>, Fanxing Zhang, Zhanglin Cheng. <br>
-              <i>IEEE International Symposium on Mixed and Augmented Reality</i> (ISMAR). 2021.<br>
-
-              &#10140; <badge-float> &nbsp;Core-A*, CCF-B </badge-float>&nbsp
-              <a href="assets/data/ismar21_building.pdf">[pdf]</a>
-              <a href="https://www.bilibili.com/video/BV1wQ4y1z79K?spm_id_from=333.999.0.0">[video]</a>
-              <a href="https://github.com/RyuZhihao123/ISMAR_Building">[GitHub]</a>
-            </papercontent>
+          <div class="paper-card__body">
+            <h3 class="paper-card__title">BuildingSketch: Freehand Mid-Air Sketching for Building Modeling.</h3>
+            <p class="paper-card__authors"><b>Zhihao Liu</b>, Fanxing Zhang, Zhanglin Cheng.</p>
+            <p class="paper-card__venue"><i>IEEE International Symposium on Mixed and Augmented Reality</i> <b>(ISMAR)</b>. 2021.</p>
+            <div class="paper-card__links"><span class="paper-card__tag">Core-A*, CCF-B</span>&nbsp <a href="assets/data/ismar21_building.pdf">[pdf]</a> <a href="https://www.bilibili.com/video/BV1wQ4y1z79K?spm_id_from=333.999.0.0">[video]</a> <a href="https://github.com/RyuZhihao123/ISMAR_Building">[GitHub]</a></div>
           </div>
-        </div>
+        </article>
 
         <!-- *******  PAPER - 4  ******* -->
-        <div class="paper-container">
-          <div class="paper-box-image">
-            <div class="badge">VR</div>
-            <!-- <div class="badge" style="margin-left: 5.5em; background-color: #5588ff;">CCF-B</div> -->
+        <article class="paper-card">
+          <div class="paper-card__thumb">
+            <span class="paper-card__badge">VR</span>
             <img src='images/PaperFigs/fig_vr2021.png' alt="sym" width="100%">
           </div>
-
-          <div class="paper-box-text">
-            <papertitle>Mid-Air Finger Sketching for Tree Modeling.</papertitle> <br>
-            <papercontent>F. Zhang*, <b>Zhihao Liu* <i>(equal contribution)</i></b>, Z. Cheng, Oliver Deussen, Baoquan Chen,
-              Yunhai Wang.<br>
-              <i>IEEE Conference on Virtual Reality and 3D User Interfaces</i> (VR). 2021.<br>
-
-              &#10140; <badge-float> &nbsp;Core-A*, CCF-A </badge-float>&nbsp
-              <a href="assets/data/VR21_tree.pdf">[pdf]</a>
-              <a href="https://www.bilibili.com/video/BV1Lv41187iv">[video]</a>
-              <a href="https://github.com/RyuZhihao123/VR_TreeModeling">[GitHub]</a>
-            </papercontent>
+          <div class="paper-card__body">
+            <h3 class="paper-card__title">Mid-Air Finger Sketching for Tree Modeling.</h3>
+            <p class="paper-card__authors">F. Zhang*, <b>Zhihao Liu* <i>(equal contribution)</i></b>, Z. Cheng, Oliver Deussen, Baoquan Chen, Yunhai Wang.</p>
+            <p class="paper-card__venue"><i>IEEE Conference on Virtual Reality and 3D User Interfaces</i> <b>(IEEE VR)</b>. 2021.</p>
+            <div class="paper-card__links"><span class="paper-card__tag">Core-A*, CCF-A</span>&nbsp <a href="assets/data/VR21_tree.pdf">[pdf]</a> <a href="https://www.bilibili.com/video/BV1Lv41187iv">[video]</a> <a href="https://github.com/RyuZhihao123/VR_TreeModeling">[GitHub]</a></div>
           </div>
-        </div>
+        </article>
 
         <!-- *******  PAPER - 4  ******* -->
-        <div class="paper-container">
-          <div class="paper-box-image">
-            <div class="badge">GMOD</div>
-            <!-- <div class="badge" style="margin-left: 5.5em; background-color: #5588ff;">CCF-B</div> -->
+        <article class="paper-card">
+          <div class="paper-card__thumb">
+            <span class="paper-card__badge">GMOD</span>
             <img src='images/paper1 - Copy.png' alt="sym" width="100%">
           </div>
-
-          <div class="paper-box-text">
-            <papertitle>Single Image Tree Reconstruction via Adversarial Network.</papertitle> <br>
-            <papercontent><b>Zhihao Liu</b>, Kai Wu, Jianwei Guo, Yunhai Wang, Oliver Deussen, Zhanglin Cheng.<br>
-              <i>Graphical Models</i>. 2021.<br>
-
-              &#10140; <badge-float> &nbsp;CCF-B Journal </badge-float>&nbsp
-              <a href="https://doi.org/10.1016/j.gmod.2021.101115">[pdf]</a>
-              <a href="https://www.bilibili.com/video/BV1Yv41147tP">[video]</a>
-              <a href="https://github.com/RyuZhihao123/GM_2021">[GitHub]</a>
-            </papercontent>
+          <div class="paper-card__body">
+            <h3 class="paper-card__title">Single Image Tree Reconstruction via Adversarial Network.</h3>
+            <p class="paper-card__authors"><b>Zhihao Liu</b>, Kai Wu, Jianwei Guo, Yunhai Wang, Oliver Deussen, Zhanglin Cheng.</p>
+            <p class="paper-card__venue"><i>Graphical Models</i>. 2021.</p>
+            <div class="paper-card__links"><span class="paper-card__tag">CCF-B Journal</span>&nbsp <a href="https://doi.org/10.1016/j.gmod.2021.101115">[pdf]</a> <a href="https://www.bilibili.com/video/BV1Yv41147tP">[video]</a> <a href="https://github.com/RyuZhihao123/GM_2021">[GitHub]</a></div>
           </div>
-        </div>
+        </article>
 
         <!-- *******  PAPER - 5  ******* -->
-        <div class="paper-container">
-          <div class="paper-box-image">
-            <div class="badge">ICVRV</div>
-            <!-- <div class="badge" style="margin-left: 5.5em; background-color: #5588ff;">CCF-B</div> -->
+        <article class="paper-card">
+          <div class="paper-card__thumb">
+            <span class="paper-card__badge">ICVRV</span>
             <img src='images/paper3.png' alt="sym" width="100%">
           </div>
-
-          <div class="paper-box-text">
-            <papertitle>Interactive Modeling of Trees using VR Devices.</papertitle> <br>
-            <papercontent><b>Zhihao Liu</b>, Ce Shen, Zhi Li, Tingyu Weng, Oliver Deussen, Zhanglin Cheng, Dangxiao
-              Wang.<br>
-              <i>IEEE International Conference on Virtual Reality and Visualization</i>. 2019.<br>
-
-              &#10140; <badge-float> &nbsp;CCF-C Conf. </badge-float>&nbsp
-              <a href="https://ieeexplore.ieee.org/document/9212896">[pdf]</a>
-              <a href="https://github.com/RyuZhihao123/VR_Tree_Modeling">[GitHub]</a>
-            </papercontent>
+          <div class="paper-card__body">
+            <h3 class="paper-card__title">Interactive Modeling of Trees using VR Devices.</h3>
+            <p class="paper-card__authors"><b>Zhihao Liu</b>, Ce Shen, Zhi Li, Tingyu Weng, Oliver Deussen, Zhanglin Cheng, Dangxiao Wang.</p>
+            <p class="paper-card__venue"><i>IEEE International Conference on Virtual Reality and Visualization</i>. 2019.</p>
+            <div class="paper-card__links"><span class="paper-card__tag">CCF-C Conf.</span>&nbsp <a href="https://ieeexplore.ieee.org/document/9212896">[pdf]</a> <a href="https://github.com/RyuZhihao123/VR_Tree_Modeling">[GitHub]</a></div>
           </div>
-        </div>
+        </article>
 
 
 
@@ -503,7 +423,7 @@
 
 
   <footer class="site-footer h-card">
-    <data class="u-url" href="/"></data>
+    <data class="u-url" href="index.html"></data>
 
     <div class="wrapper">
 
